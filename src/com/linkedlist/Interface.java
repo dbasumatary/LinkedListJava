@@ -6,5 +6,4 @@ public interface Interface<K> {
     K getKey();
     Interface<K> getNext();
     void setNext(Interface<K> next);
-
 }
