@@ -8,7 +8,7 @@ public class LinkedList {
         this.head = null;
         this.tail = null;
     }
-    public MyNode add(MyNode newNode) {          //method add
+    public void append(MyNode newNode) {          //method append
         //If the linked list is empty
         if (this.head == null){
             this.head = newNode;
@@ -17,12 +17,9 @@ public class LinkedList {
             this.tail = newNode;
         }//If the linked list is not empty
         else {
-            MyNode tempNode = this.head;              //save the old head in a variable
-            this.head = newNode;                      //the new head
-            this.head.setNext(tempNode);              //the new head should point to old head
-
+            this.tail.setNext(newNode);            //setting the next tail
+            this.tail = newNode;                   //appending the tails
         }
-        return head;
     }
     public void display(){                           //display method
         Interface temp = head;

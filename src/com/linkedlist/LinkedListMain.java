@@ -7,15 +7,15 @@ public class LinkedListMain {
         MyNode<Integer> nodeThree = new MyNode<>(key3);
 
         LinkedList linkedList = new LinkedList();               //creating new LinkedList object of class LinkedList
-        //Calling the method add from another class
-        linkedList.add(nodeOne);
-        linkedList.add(nodeTwo);
-        linkedList.add(nodeThree);
+        //Calling the method append from another class
+        linkedList.append(nodeOne);
+        linkedList.append(nodeTwo);
+        linkedList.append(nodeThree);
 
         //Calling the method displayNode from another class
         linkedList.display();
     }
     public static void main(String[] args) {
-        createLinkedList(70,30,56);                 //calling the method
+        createLinkedList(56,30,70);                 //calling the method
     }
 }
