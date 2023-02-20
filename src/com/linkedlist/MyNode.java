@@ -1,4 +1,5 @@
 package com.linkedlist;
+/*Implements the Interface*/
 
 public class MyNode<K> implements Interface<K> {
     private K key;
