@@ -31,7 +31,24 @@ public class LinkedListMain {
         
         linkedList.search();                              //calling search method
     }
+
+    public static void insertElement(Integer key1, Integer key2, Integer key3){
+        MyNode<Integer> nodeOne = new MyNode<>(key1);
+        MyNode<Integer> nodeTwo = new MyNode<>(key2);
+        MyNode<Integer> nodeThree = new MyNode<>(key3);
+        MyNode<Integer> insertedNode = new MyNode<>(40);
+        LinkedList linkedList = new LinkedList();               //creating new LinkedList object of class LinkedList
+
+        linkedList.append(nodeOne);                       //appending first node
+        linkedList.append(nodeTwo);                       //appending second node
+        linkedList.append(nodeThree);                     //appending third node
+
+        linkedList.search();
+        System.out.println("Now we want to add "+ insertedNode.getKey()+ " after " + nodeTwo.getKey());
+        linkedList.insert(nodeTwo,insertedNode);          //insert method
+        linkedList.display();                             //display method
+    }
     public static void main(String[] args) {
-        searchElement(56,30,70);                 //calling the method
+        insertElement(56,30,70);                 //calling the method
     }
 }

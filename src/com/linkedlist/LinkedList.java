@@ -73,6 +73,7 @@ public class LinkedList {
         return null;
     }
 
+
     public void display(){                           //display method
         Interface temp = head;
         if(head == null) {
