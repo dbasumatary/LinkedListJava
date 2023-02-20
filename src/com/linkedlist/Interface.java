@@ -1,5 +1,5 @@
 package com.linkedlist;
-/*Interface Linked List*/
+/*Interface for node operations*/
 
 public interface Interface<K> {
     void setKey(K key);
