@@ -1,5 +1,5 @@
 package com.linkedlist;
-/*Creating Linked List by popping 70 from the stack*/
+/*Searching linked list to find node with value 30*/
 
 public class LinkedList {
     private MyNode head;
@@ -54,6 +54,23 @@ public class LinkedList {
             this.tail = (MyNode) tempNode.getNext();              //setting the second element as tail
             this.tail.setNext(null);                             //setting the second element as tail
         }
+    }
+
+    public MyNode search(){                                      //search method
+        if(head == null)
+            System.out.println("Linked List is empty!");
+        else{
+            MyNode tempNode = head;                              //initiating tempNode as head
+            int position = 0;                                    //to check the position of node
+            while (tempNode != null){
+                position++;
+                if(tempNode.getKey().equals(30)){                //checking if the key equals 30
+                    System.out.println("The node with value 30 is located at position "+position+" in the linked list");
+                }
+                tempNode = (MyNode) tempNode.getNext();           //iterating by changing tempNode to next node
+            }
+        }
+        return null;
     }
 
     public void display(){                           //display method
