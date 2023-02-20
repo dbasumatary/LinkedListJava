@@ -1,5 +1,5 @@
 package com.linkedlist;
-/*Creating Linked List by inserting 30 to 56 and 70*/
+/*Creating Linked List by popping 56 from the stack*/
 
 public class LinkedList {
     private MyNode head;
@@ -40,6 +40,12 @@ public class LinkedList {
         tempNode = earlierNode.getNext();
         earlierNode.setNext(newNode);                         //setting the newNode as earlierNode
         newNode.setNext(tempNode);                            //newNode will point to element which was earlierNode
+    }
+    public void pop() {                                       //pop method
+        if(head == null)
+            System.out.println("Linked List is empty!");
+        else
+            this.head = (MyNode) head.getNext();             //the next node will be the new head
     }
 
     public void display(){                           //display method
